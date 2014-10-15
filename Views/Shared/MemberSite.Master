@@ -1,0 +1,32 @@
+<%--
+//---------------------------------------------------------------------------------------------------------------
+//    $HeadURL: https://my.redfive.biz/svn/izine/iZINE.Web/trunk/iZINE.Web.MVC/Views/Shared/MemberSite.Master $
+//    Owner: Prakash Bhatt
+//    $Date: 2010-08-10 18:19:42 +0200 (Tue, 10 Aug 2010) $
+//    $Revision: 1941 $
+//    $Author: remco.verhoef $
+//    Description: master page for non admin
+//    Copyright: 2010 iZine Solutions. All rights reserved.
+//---------------------------------------------------------------------------------------------------------------
+--%>
+
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" MasterPageFile="~/Views/Shared/Site.Master" %>
+<%@ Import Namespace="iZINE.Web.MVC.Extensions" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="Menu" runat="server">
+    <ul>
+         <li><%=Html.MenuActionLink("STATUS", "index", "status","status","statusActive")%></li>
+         <li><%=Html.MenuActionLink("ARCHIEF", "index", "archief", "archief","archiefActive" )%></li>
+         <li><%=Html.MenuActionLink("CERTIFIED PDF", "index", "pdf","pdf","pdfActive")%></li>
+         <li><%=Html.MenuActionLink("PUBLIC OVERZICHT", "index", "plank", "publicatie" ,"publicatieActive" )%></li>
+         <li><%=Html.MenuActionLink("DOWNLOADS", "index", "download", "download","downloadActive")%></li>
+    </ul>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="MainContent" runat="server">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+</asp:Content>

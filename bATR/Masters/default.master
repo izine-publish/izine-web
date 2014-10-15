@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="default.master.cs" Inherits="bATR_Masters_default" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>bATR: Smooth texts using custom fonts</title>
+    <style type="text/css">
+	
+		html, body
+		{
+			font-family: Verdana, Helvetica;
+			font-size: .85em;
+		}
+		
+		.introText
+		{
+			margin: 10px 0px 20px 0px;
+		}
+		
+		table 
+		{
+			empty-cells: show;
+			border-collapse: collapse;
+		}
+		
+		table.dataTable
+		{
+			border: solid 1px #cfcfcf;
+		}
+		
+		td, th
+		{
+			padding: 5px;
+		}
+		
+		.dataTable td, .dataTable th
+		{
+			border: solid 1px #cfcfcf;
+		}
+		
+		th
+		{
+			text-align: left;
+		}
+		
+		
+		.login input
+		{
+			width: 150px;
+		}
+	
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+		<asp:MultiView ID="mvContent" runat="server">
+			<asp:View ID="vLogin" runat="server">
+				<div style="text-align: center; margin-top: 100px;">
+					<b>Login for the <a href="http://www.codeplex.com/bATR">bATR</a></b>
+				</div>
+				<div style="border: solid 1px #000; padding: 30px; width: 300px; margin-left: auto; margin-right: auto;">
+					<table class="login">
+						<tr>
+							<td>Username:&nbsp;</td>
+							<td><asp:TextBox ID="txtLogin" runat="server" TextMode="SingleLine" MaxLength="255"></asp:TextBox></td>
+						</tr>
+						<tr>
+							<td>Password:&nbsp;</td>
+							<td><asp:TextBox ID="txtPasswd" runat="server" TextMode="Password" MaxLength="255"></asp:TextBox></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><asp:Button ID="btnLogin" Text="Login" runat="server" OnClick="btnLogin_Click" /></td>
+						</tr>
+					</table>
+				</div>
+			</asp:View>
+			
+			<asp:View ID="vContent" runat="server">
+				<div style="width: 800px; margin-left: auto; margin-right: auto;">
+				<a href="bATRFonts.aspx">Fonts listing</a> - <a href="bATRCache.aspx">Cache listing</a> - <asp:LinkButton ID="lbLogoff" runat="server" OnClick="lbLogoff_Click" Text="log off"></asp:LinkButton> <br /><br />
+		
+				<asp:ContentPlaceHolder id="cphDefaultContent" runat="server"></asp:ContentPlaceHolder>
+				</div>
+			</asp:View>
+	        
+        </asp:MultiView>
+    </div>
+    <div style="text-align: center; margin-top: 100px; font-size: 0.8em;">
+		The <a href="http://www.codeplex.com/bATR">bATR is a free open-source component</a> for rendering smooth text images using your favourite fonts<br />
+		&copy; by Bart de Vries @ De Nieuwe Zaak
+    </div>
+    </form>
+</body>
+</html>

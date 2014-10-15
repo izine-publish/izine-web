@@ -1,0 +1,66 @@
+﻿input
+{
+		font: Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+}
+
+input.button
+{
+        border-color: #EFF2BF;
+        border-style: solid;
+        border-width: 1px;
+
+        font: Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+        color: white;
+
+        background-color: #a5bd31;
+}
+
+input.username 
+{
+        background-image: url(images/icon_user.gif);
+        background-position: 1px 2px;
+        background-repeat: no-repeat;
+
+        border-color: #a5bd31;
+        border-style: solid;
+        border-width: 1px;
+
+        padding: 4px 1px 2px 20px;      
+}
+
+input.textbox
+{
+        border-color: #a5bd31;
+        border-style: solid;
+        border-width: 1px;
+
+        padding: 4px 1px 2px 1px;       
+}
+
+input.textarea
+{
+        border-color: #a5bd31;
+        border-style: solid;
+        border-width: 1px;
+
+        padding: 2px 1px 2px 1px;       
+}
+input.textarea
+{
+        border-color: #a5bd31;
+        border-style: solid;
+        border-width: 1px;
+
+        padding: 2px 1px 2px 1px;       
+}
+
+.hover
+{
+        background-color: #EFF2BF;
+
+}
+
+a {
+	color:#a1bf36;
+	text-decoration:none;
+}

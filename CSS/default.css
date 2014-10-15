@@ -1,0 +1,939 @@
+/* <resourceSettings>
+      <resourceLocation name="WebStylesResources" type="SmartSoft.Resources.WebStyles, SmartSoft.Resources, Version=1.0.0.0, Culture=neutral" />
+   </resourceSettings> */
+   
+* { margin: 0; padding: 0; }
+body { font: 0.75em Tahoma, Verdana, Arial, Helvetica, sans-serif; background:white; color:black;overflow-y:scroll; }
+
+a img {
+	border:none;
+}
+
+a {
+	color:#a1bf36;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+.title {
+	width:824px;
+	background-color:#a0bf36;
+	font: normal 19px "Myriad Pro";
+	color: #FFF;
+	padding:0px 0px 0px 7px;
+	margin:0px 0px 20px 0px;
+	
+	text-transform: uppercase;
+	clear:both;
+}
+
+h1 {
+	width:824px;
+	height:25px;
+	background-color:#a0bf36;
+	font: normal 19px "Myriad Pro";
+	color: #FFF;
+	padding:1px 0px 0px 7px;
+	margin:0px 0px 10px 0px;
+	text-transform: uppercase;
+	clear:both;
+}
+
+h2 {
+	font-size:1.2em;
+	font-weight:bold;
+	color:#a1bf36;
+	margin-bottom:1em;
+}
+
+p {
+	font-size:1.1em;
+	padding-bottom:1.6em;
+	margin:0;
+}
+
+#container {
+	width:990px;
+	margin:0 auto;
+	position:relative;
+}
+
+/** Header **/
+#header {
+	height:138px;
+	width:990px;
+	top: 0px;
+	left: 0px;
+}
+
+#header a#iZine {
+	text-indent:-9999px;
+	height:68px;
+	width:302px;
+	display:block;
+	background:url(/App_themes/green/images/iZine.gif) no-repeat;
+	margin:40px 0 0 83px;
+	float:left;
+}
+
+#header a#slogan {
+	text-indent:-9999px;
+	height:39px;
+	width:341px;
+	display:block;
+	background:url(/App_themes/green/images/working-apart-together.gif) no-repeat;
+	margin:79px 83px 0 0;
+	float:right;
+}
+
+#topMenu
+{
+	width: 220px;
+	height: 20px;
+	margin-right: 5px;
+	float: right;
+}
+
+#topMenu ul {
+	list-style:none;
+	width:220px;
+	height:20px;
+}
+
+#topMenu li {
+	list-style:none;
+	display:inline;
+	text-align:right;	
+}
+
+#topMenu li a
+{
+    color:#85898c;
+    }
+    
+.aActive
+{
+	color: #85898c;
+	font-weight: bold;
+}
+
+/** Menu **/
+#menu {
+	width:990px;
+	height:62px;
+	background:url(/App_themes/green/images/menu-bg.gif) no-repeat;
+}
+
+#menu ul {
+	list-style:none;
+	width:990px;
+	height:42px;
+	
+	
+}
+#menu ol
+{
+   	list-style:none;
+   	width:880px;
+	height:42px;
+	margin:0 auto;
+}
+#menu li {
+	list-style:none;
+	display:inline;
+	text-align:center;
+}
+
+#menu li a.status {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/status_overzicht.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 77px;
+}	
+
+#menu li a.status:hover {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/status_overzicht_rollover.jpg) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 77px;
+}	
+
+#homepage #menu li a.statusActive {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/status_overzicht_active.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 77px;
+}	
+
+
+
+
+#menu li a.unlock {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/lock.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 0px;
+}	
+
+#menu li a.unlock:hover {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/lock.jpg) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 0px;
+}	
+
+#homepage #menu li a.unlockActive {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/lock_active.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 0px;
+}	
+
+
+#menu li a.Keystatus {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/status_overzicht.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 0px;
+}	
+
+#menu li a.Keystatus:hover {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/status_overzicht_rollover.jpg) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 0px;
+}	
+
+#homepage #menu li a.KeystatusActive {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/status_overzicht_active.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 0px;
+}	
+
+
+
+#menu li a.archief {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/archief.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}	
+
+#menu li a.archief:hover {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/archief_rollover.jpg) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 5px;
+}	
+
+#menu li a.archiefActive {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/archief_active.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}	
+
+#menu li a.pdf {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/pdf.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}
+
+#menu li a.pdf:hover {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/pdf_rollover.jpg) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 5px;
+}
+
+#menu li a.pdfActive {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/pdf_active.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}
+
+#menu li a.publicatie {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/publicatie_overzicht.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}	
+
+#menu li a.publicatie:hover {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/publicatie_overzicht_rollover.jpg) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 5px;
+}	
+
+#menu li a.publicatieActive {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/publicatie_overzicht_active.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}	
+
+#menu li a.download {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/downloads_normal.gif) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 5px;
+}
+
+#menu li a.download:hover {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/downloads_hover.gif) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 5px;
+}
+
+#menu li a.downloadActive {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/downloads_down.gif) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 5px;
+}
+
+/** Admin Menu **/
+
+#menu li a.home {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/admin.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 77px;
+}	
+
+#menu li a.home:hover {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/admin_rollover.jpg) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 77px;
+}	
+
+#homepage #menu li a.homeActive {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/admin_active.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 77px;
+}	
+
+#menu li a.organizations {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/organisaties.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}	
+
+#menu li a.organizations:hover {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/organisaties_rollover.jpg) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 5px;
+}	
+
+#homepage #menu li a.organizationsActive {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/organisaties_active.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}	
+
+#menu li a.titles {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/titels_overzicht.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}	
+
+#menu li a.titles:hover {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/titels_rollover.jpg) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 5px;
+}	
+
+#homepage #menu li a.titlesActive {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/titels_overzicht_active.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}	
+
+
+#menu li a.editions {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/edities_overzicht.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}	
+
+#menu li a.editions:hover {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/edities_overzicht_rollover.jpg) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 5px;
+}	
+
+#homepage #menu li a.editionsActive {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/edities_overzicht_active.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}
+
+#menu li a.users {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/gebruikers.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}	
+
+#menu li a.users:hover {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/gebruikers_rollover.jpg) no-repeat;
+	text-indent:-9999px;
+	height:42px;
+	width:142px;
+	margin:20px 0 0 5px;
+}	
+
+#homepage #menu li a.usersActive {
+	text-decoration:none;
+	display:block;
+	float:left;	
+	background: url(/App_themes/green/images/admin/gebruikers_active.jpg) no-repeat;
+	text-indent:-9999px;
+	height:37px;
+	width:142px;
+	margin:25px 0 0 5px;
+}	
+
+
+
+
+/** Main **/
+#maintext {
+	width:824px;
+	margin:10px 0 20px 83px;
+	font-size:1.1em;
+}
+
+#mainblock {
+	width:824px;
+	margin:20px 0 10px 83px;
+	display: table;
+	min-height:350px;	
+	height: auto !important;
+	height:350px;	
+	position:relative;				
+}
+
+#mainblock .block1 {
+	padding-bottom:216px;
+	width:270px;
+	float:left;
+}
+
+#mainblock .block2 {
+	width:246px;
+	float:left;
+	margin:0 18px;
+}
+
+#mainblock .block2 .top {
+	height:10px;
+	width:246px;
+	background:url(/App_themes/green/images/blok-top.gif) no-repeat;
+}
+
+#mainblock .block2 .text {
+	padding:0 8px 0 10px;
+	background:url(/App_themes/green/images/blok-bg.gif) repeat-y;
+}
+
+#mainblock .block2 .text p {
+	padding-bottom:0px;
+}
+
+#mainblock .block2 .text img {
+	margin-bottom:10px;
+}
+
+#mainblock .block2 .bottom {
+	height:10px;
+	width:246px;
+	margin-bottom:10px;
+	background:url(/App_themes/green/images/blok-bottom.gif) no-repeat;
+}
+
+#mainblock .block3 {
+	width:270px;
+	float:left;
+}
+
+#mainblock .block3 ul {
+	list-style-image:url(/App_themes/green/images/list-image.gif);
+	margin-left:20px;
+}
+
+#mainblock .block3 li {
+	font-weight:bold;
+	color:#a1bf36;
+	line-height:1.6em;
+	font-size:1.3em;
+	margin-bottom:10px;
+}
+
+/** Mainpage **/
+#mainpage {
+	background:url(/App_themes/green/images/page-bg.jpg) bottom no-repeat;
+	width:824px;
+	margin:16px 0 0 83px;
+	display:table;
+}
+#mainpage_nieuws {
+	background:url(/App_themes/green/images/page-bg_nieuws.jpg) bottom no-repeat;
+	width:824px;
+	margin:16px 0 0 83px;
+	display:table;
+}
+
+#mainpage #gmaps{
+	border: 1px solid black;} 
+
+#izinelabpage #mainpage {
+	background:url(/App_themes/green/images/page2-bg.jpg) bottom no-repeat;
+	width:824px;
+	margin:16px 0 0 83px;
+	display:table;
+}
+
+
+#text {
+	padding-bottom:20px;
+	width:560px;
+	float:left;
+	min-height:329px;
+	height:auto !important;
+}
+
+#mainpage_nieuws #nieuws {
+	width:570px;
+	float:left;
+	padding-bottom: 11px;
+	height:auto !important;
+}
+.nieuwsartikel {
+	background: url(/App_themes/green/images/nieuws_bg.gif);
+	margin-bottom: 20px;
+	}
+	
+.nieuwsartikel p {
+	margin:0 16px;
+}
+	
+.nieuwsartikel .nieuwstop {
+	width: 570px;
+	height: 4px;
+	background: url(/App_themes/green/images/nieuwstop.gif);
+	margin-bottom: 8px;
+	}	
+	
+.nieuwsartikel .nieuwsbottom {
+	width: 570px;
+	height: 4px;
+	background: url(/App_themes/green/images/nieuwsbottom.gif);
+	margin-top: 3px;
+	}
+	
+.nieuwsartikel h2 {
+	margin-bottom: 0px;
+	padding-left:16px;
+	}
+		
+.nieuwsafbeelding {
+	margin: 4px 16px 0px 16px;
+	}
+.nieuwsberichtafbeelding {
+	margin: 4px 16px 15px 16px;
+	}	
+
+
+/* for Internet Explorer */
+/*\*/
+* html #mainpage #text {
+  height:329px;
+}
+/**/
+
+
+#mainpage #extra {
+	width:230px;
+	float:right;
+	padding-bottom:216px;
+	color:#a1bf36;
+	font-size:1.3em;
+	line-height:1.8em;
+	padding-top:30px;
+}
+
+/** Footer **/
+#footer {
+	color:#a1bf36;
+	text-align:center;
+	width:990px;
+	height:39px;
+	background:url(/App_themes/green/images/footer-bg.gif) no-repeat;
+	line-height:4em;
+	clear:both;
+}
+
+#footer a {
+	color:#a1bf36;
+	text-decoration:none;
+}
+
+#footer a:hover {
+	text-decoration:underline;
+}
+
+div  
+{
+	word-wrap: break-word ;
+}
+
+.gridViewFirstColumn
+{
+	padding-left:15px;
+	height:20px;
+	}
+	
+.updateProgress
+{
+    top: 10px; 
+    left: 0px; 
+    position: fixed;
+    width: 150px; 
+    line-height:25px;
+    background-color: #a5bd31; 
+    font-weight:bold; 
+    font-size: 11pt;
+    color:White;
+    border-bottom: solid 1px #EFF2BF;
+    border-right: solid 1px #EFF2BF;
+}
+
+.updateProgress img
+{
+	padding-left:15px;
+	padding-right:15px;
+}
+
+
+.data-row
+{
+	padding-left:15px;
+	height:20px;
+}
+
+.alt-data-row
+{
+	padding-left:15px;
+	height:20px;
+	background-color:#FFF2BF;	
+}
+
+/* mouseover row style */
+.row-over 
+{ background-color:#ffffff; }
+
+/* mouseover row style */
+.row-select 
+{ 
+    background:#f1f1f1;
+    color:#555;
+}
+
+.bATR_Hdr_P
+{
+	padding-left:10px;
+	}
+	
+#info
+{
+    width: 650px;
+padding-top: 4px;
+padding-right: 4px;
+padding-bottom: 4px;
+padding-left: 30px;
+margin-bottom: 12px;
+font-size: 1.1em;
+border-width:2px;
+border-style:solid;
+background-image: url(/App_themes/green/images/true.png);
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-position: 8px 5px;
+background-color: #dfffdf;
+border-color:#9fcf9f;
+color: #005f00;
+}
+
+.documentPages
+{
+    float: left; 
+    margin: 4px; color: Black;     
+   background-image:url('App_themes/green/images/magazine_bg.png'); background-repeat:no-repeat;
+}
+    
+.refreshButton
+{
+    background:url('/cssimages/getimagepath/refreshbutton');
+    width:115px;
+    height:35px;
+    border-width:0px;   
+    cursor:pointer; 
+}
+
+.refreshButtonOver
+{
+    background:url('/App_themes/green/images/buttons/vernieuwen_rollover.png');
+    width:115px;
+    height:35px;
+    border-width:0px;    
+    cursor:pointer;
+}
+
+.searchButton
+{
+    background:url('/App_themes/green/images/buttons/zoeken.png');
+    width:115px;
+    height:35px;
+    border-width:0px; 
+    cursor:pointer;   
+}
+
+.searchButtonOver
+{
+    background:url('/App_themes/green/images/buttons/zoeken_rollover.png');
+    width:115px;
+    height:35px;
+    border-width:0px;    
+    cursor:pointer;
+}
+
+.resetButton
+{
+    background:url('/App_themes/green/images/buttons/reset.png');
+    width:115px;
+    height:35px;
+    border-width:0px;    
+    cursor:pointer;
+}
+
+.resetButtonOver
+{
+    background:url('/App_themes/green/images/buttons/reset_rollover.png');
+    width:115px;
+    height:35px;
+    border-width:0px;   
+    cursor:pointer; 
+}
+
+.defaultButton
+{
+    background:url('/App_themes/green/images/buttons/button.png');
+    width:115px;
+    height:35px;
+    border-width:0px;    
+    cursor:pointer;
+    color:#fff;
+    font-family:sans-serif;        
+    font-size:11px;    
+}
+
+.defaultButtonOver
+{
+    background:url('/App_themes/green/images/buttons/button_rollover.png');
+    width:115px;
+    height:35px;
+    border-width:0px;   
+    cursor:pointer; 
+    color:#94B441;
+    font-family:sans-serif;    
+    font-size:11px;    
+}
+
+
+#mainblock select
+{
+	font-size: 14px;
+}
+.active
+{
+	background-color: #EFF2BF;
+	
+}
+
+table.status thead th
+{
+    background-color: #D1D2D3; 
+    font-size: 11px;
+    font-weight: bolder;
+}
+
+table.status tbody tr
+{
+    color:#c91787;
+    font-size: 11px;
+}
+
+table.status a
+{
+    color:#c91787;
+}
+ 

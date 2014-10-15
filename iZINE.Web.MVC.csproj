@@ -1,0 +1,675 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B2F10FC-23D5-497D-A679-1CE15A602F50}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iZINE.Web.MVC</RootNamespace>
+    <AssemblyName>iZINE.Web.MVC</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30512.17815, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="bATR, Version=1.6.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\bATR.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\iZINE.Web\bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity.Design">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.IdentityModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.IdentityModel.Selectors">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="All Code\configuration\IZineWebConfiguration.cs" />
+    <Compile Include="All Code\DocumentPagePreviewData.cs" />
+    <Compile Include="All Code\dto\EditionTitlesdto.cs" />
+    <Compile Include="All Code\dto\assetdto.cs" />
+    <Compile Include="All Code\dto\commentdto.cs" />
+    <Compile Include="All Code\dto\constantdto.cs" />
+    <Compile Include="All Code\dto\lockdto.cs" />
+    <Compile Include="All Code\dto\shelvedto.cs" />
+    <Compile Include="All Code\dto\statusdto.cs" />
+    <Compile Include="All Code\dto\taskdto.cs" />
+    <Compile Include="All Code\dto\titledto.cs" />
+    <Compile Include="All Code\dto\TitleStatusdto.cs" />
+    <Compile Include="All Code\dto\userdto.cs" />
+    <Compile Include="All Code\dto\Versiondto.cs" />
+    <Compile Include="All Code\ExampleIndexDocument.cs" />
+    <Compile Include="All Code\handlers\AssetHandler.cs" />
+    <Compile Include="All Code\handlers\CssImageHandler.cs" />
+    <Compile Include="All Code\handlers\DownloadsHandler.cs" />
+    <Compile Include="All Code\handlers\ImageHandler.cs" />
+    <Compile Include="All Code\handlers\PdfHandler.cs" />
+    <Compile Include="All Code\handlers\ThumbnailHandler.cs" />
+    <Compile Include="All Code\ILogger.cs" />
+    <Compile Include="App_GlobalResources\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\AdminUser\AreaRegistration.cs" />
+    <Compile Include="Areas\AdminUser\Controllers\DownloadController.cs" />
+    <Compile Include="Areas\AdminUser\Controllers\AdminHomeController.cs" />
+    <Compile Include="Areas\AdminUser\Controllers\OrganizationController.cs" />
+    <Compile Include="Areas\AdminUser\Controllers\ShelvesController.cs" />
+    <Compile Include="Areas\AdminUser\Controllers\TitleController.cs" />
+    <Compile Include="Areas\AdminUser\Controllers\TitleStatusController.cs" />
+    <Compile Include="Areas\AdminUser\Controllers\LockController.cs" />
+    <Compile Include="Areas\AdminUser\Controllers\UsersController.cs" />
+    <Compile Include="Areas\AdminUser\Models\DownloadModal.cs" />
+    <Compile Include="Areas\AdminUser\Models\OrganisationModel.cs" />
+    <Compile Include="Areas\AdminUser\Models\SheleveModel.cs" />
+    <Compile Include="Areas\AdminUser\Models\TitleModel.cs" />
+    <Compile Include="Areas\AdminUser\Models\TitleStatusModel.cs" />
+    <Compile Include="Areas\AdminUser\Models\UnLockModel.cs" />
+    <Compile Include="Areas\AdminUser\Models\UserModel.cs" />
+    <Compile Include="Areas\KeyUser\AreaRegistration.cs" />
+    <Compile Include="Areas\KeyUser\Controllers\KeyDownloadController.cs" />
+    <Compile Include="Areas\KeyUser\Controllers\KeyHomeController.cs" />
+    <Compile Include="Areas\KeyUser\Controllers\KeyOrganisationController.cs" />
+    <Compile Include="Areas\KeyUser\Controllers\KeyshelvesController.cs" />
+    <Compile Include="Areas\KeyUser\Controllers\KeyTitleController.cs" />
+    <Compile Include="Areas\KeyUser\Controllers\KeyTitleStatusController.cs" />
+    <Compile Include="Areas\KeyUser\Controllers\KeyUsersController.cs" />
+    <Compile Include="Areas\KeyUser\Controllers\LockController.cs" />
+    <Compile Include="Areas\KeyUser\Models\DownloadModal.cs" />
+    <Compile Include="Areas\KeyUser\Models\OrganisationModel.cs" />
+    <Compile Include="Areas\KeyUser\Models\SheleveModel.cs" />
+    <Compile Include="Areas\KeyUser\Models\TitleModel.cs" />
+    <Compile Include="Areas\KeyUser\Models\TitleStatusModel.cs" />
+    <Compile Include="Areas\KeyUser\Models\UnLockModel.cs" />
+    <Compile Include="Areas\KeyUser\Models\UserModel.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminHomeController.cs" />
+    <Compile Include="Controllers\ArchiefController.cs" />
+    <Compile Include="Controllers\cssimagesController.cs" />
+    <Compile Include="Controllers\DownloadController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrganisationController.cs" />
+    <Compile Include="Controllers\PdfController.cs" />
+    <Compile Include="Controllers\PlankController.cs" />
+    <Compile Include="Controllers\SettingController.cs" />
+    <Compile Include="Controllers\ShelvesController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
+    <Compile Include="Controllers\TitleController.cs" />
+    <Compile Include="Controllers\TitleStatusController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="controls\progress.ascx.cs">
+      <DependentUpon>progress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\progress.ascx.designer.cs">
+      <DependentUpon>progress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\htmlhelper.cs" />
+    <Compile Include="Extensions\LinqHelper.cs" />
+    <Compile Include="Extensions\Paging\IPagedList.cs" />
+    <Compile Include="Extensions\Paging\PagedList.cs" />
+    <Compile Include="Extensions\Paging\Pager.cs" />
+    <Compile Include="Extensions\Paging\PagingExtensions.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GZipEncoder.cs" />
+    <Compile Include="Helper\JavaScriptExtensions.cs" />
+    <Compile Include="Helper\TrafficControl.cs" />
+    <Compile Include="IServer.cs" />
+    <Compile Include="LINQLogger.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ArchiefModel.cs" />
+    <Compile Include="Models\C_PdfModel.cs" />
+    <Compile Include="Models\DownloadModal.cs" />
+    <Compile Include="Models\MyChoice.cs" />
+    <Compile Include="Models\NotificationModel.cs" />
+    <Compile Include="Models\OrganisationModel.cs" />
+    <Compile Include="Models\SheleveModel.cs" />
+    <Compile Include="Models\StatusModel.cs" />
+    <Compile Include="Models\Status\Edit.cs" />
+    <Compile Include="Models\Status\Index.cs" />
+    <Compile Include="Models\TitleModel.cs" />
+    <Compile Include="Models\TitleStatusModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="CSS\Site.css" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iZINE.Businesslayer\iZINE.Businesslayer.csproj">
+      <Project>{CE1DA5FC-0CC3-4969-9416-9728446910ED}</Project>
+      <Name>iZINE.Businesslayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iZINE.Server.Console\iZINE.Server.Console.csproj">
+      <Project>{C5820F91-DD34-4D2B-93C6-DAF5CD4DA3B5}</Project>
+      <Name>iZINE.Server.Console</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IZINE.WcfAnnotation\IZINE.WcfAnnotation.csproj">
+      <Project>{7C87699B-183A-4F66-B93A-C747F1C6F8F5}</Project>
+      <Name>IZINE.WcfAnnotation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iZINE.Web.Controls\iZINE.Web.Controls\iZINE.Web.Controls.csproj">
+      <Project>{AEE1C442-0AB4-42E8-9E08-A879A2E461E1}</Project>
+      <Name>iZINE.Web.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iZINE.Web.Utils\iZINE.Web.Utils.csproj">
+      <Project>{1F7EF161-A5D1-44A4-A6DA-0AB111E02E4F}</Project>
+      <Name>iZINE.Web.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SolrSharp\src\SolrSharp.csproj">
+      <Project>{E7066BB4-97B4-4C04-BC93-8F8749356E25}</Project>
+      <Name>SolrSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bATR.config" />
+    <Content Include="App_Themes\green\web.config" />
+    <None Include="App_Themes\green\images\Admin\Thumbs.db" />
+    <None Include="App_Themes\green\images\buttons\Thumbs.db" />
+    <None Include="App_Themes\green\images\formbox\Thumbs.db" />
+    <None Include="App_Themes\green\images\Thumbs.db" />
+    <None Include="App_Themes\green\js\.svn\entries" />
+    <None Include="App_Themes\green\js\.svn\prop-base\IE8.js.svn-base" />
+    <None Include="App_Themes\green\js\.svn\text-base\IE8.js.svn-base" />
+    <Content Include="Areas\KeyUser\Views\Web.config" />
+    <Content Include="Areas\KeyUser\Views\Shared\KeyUser.Master" />
+    <Content Include="Areas\AdminUser\Views\Web.config" />
+    <Content Include="Areas\AdminUser\Views\Shared\AdminUser.Master" />
+    <None Include="images\buttons\.svn\all-wcprops" />
+    <None Include="images\buttons\.svn\entries" />
+    <None Include="images\buttons\.svn\prop-base\delete.gif.svn-base" />
+    <None Include="images\buttons\.svn\prop-base\download.gif.svn-base" />
+    <None Include="images\buttons\.svn\prop-base\history.gif.svn-base" />
+    <None Include="images\buttons\.svn\prop-base\search.gif.svn-base" />
+    <None Include="images\buttons\.svn\prop-base\upload.gif.svn-base" />
+    <None Include="images\buttons\.svn\text-base\delete.gif.svn-base" />
+    <None Include="images\buttons\.svn\text-base\download.gif.svn-base" />
+    <None Include="images\buttons\.svn\text-base\history.gif.svn-base" />
+    <None Include="images\buttons\.svn\text-base\search.gif.svn-base" />
+    <None Include="images\buttons\.svn\text-base\upload.gif.svn-base" />
+    <None Include="images\buttons\Thumbs.db" />
+    <None Include="images\pdf\.svn\all-wcprops" />
+    <None Include="images\pdf\.svn\entries" />
+    <None Include="images\pdf\.svn\prop-base\1.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\10.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\11.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\12.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\13.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\14.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\15.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\16.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\17.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\2.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\3.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\4.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\5.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\6.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\7.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\8.gif.svn-base" />
+    <None Include="images\pdf\.svn\prop-base\9.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\1.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\10.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\11.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\12.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\13.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\14.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\15.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\16.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\17.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\2.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\3.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\4.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\5.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\6.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\7.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\8.gif.svn-base" />
+    <None Include="images\pdf\.svn\text-base\9.gif.svn-base" />
+    <None Include="images\pdf\Thumbs.db" />
+    <None Include="images\Thumbs.db" />
+    <Content Include="log4net.config" />
+    <Content Include="default.aspx" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\jquery.pager.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\date.format.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\jquery-1.3.2.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\jquery.validate.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\ui.core.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\ui.dialog.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\ui.draggable.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\ui.resizable.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\web.config" />
+    <Content Include="Menu.sitemap" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\css\ui-lightness\jquery-ui-1.7.2.custom.css" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\index.html" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\builder.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\effects.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\jquery-ui-1.7.2.custom.min.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\jquery.dataTables.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\jquery.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\lightbox.css" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\lightbox.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\prototype.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\scriptaculous.js" />
+    <Content Include="Scripts\js\jquery-ui-1.7.2.custom\js\webkit.js" />
+    <Content Include="server.svc" />
+    <Content Include="Views\AdminDownload\Default.aspx" />
+    <Content Include="Views\AdminDownload\EditDownload.aspx" />
+    <Content Include="Views\Download\default.aspx" />
+    <Content Include="Views\AdminHome\Index.aspx" />
+    <Content Include="Views\Organisation\default.aspx" />
+    <Content Include="Views\Organisation\EditOrganisation.aspx" />
+    <Content Include="Views\Plank\BlankDocumentPage.ascx" />
+    <Content Include="Views\Plank\DocumetPagePreview.ascx" />
+    <Content Include="CSS\jquery-ui-1.7.2.custom.css" />
+    <Content Include="images\web.config" />
+    <Content Include="Content\CascadingDropDownList.js" />
+    <Content Include="Content\MicrosoftAjax.debug.js" />
+    <Content Include="Content\MicrosoftAjax.js" />
+    <Content Include="Content\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Content\MicrosoftMvcAjax.js" />
+    <Content Include="images\admin_button.gif" />
+    <Content Include="images\archive2_button.gif" />
+    <Content Include="images\archive2_button_active.gif" />
+    <Content Include="images\archive_button.gif" />
+    <Content Include="images\bullet.gif" />
+    <Content Include="images\bullet2.gif" />
+    <Content Include="images\buttons\delete.gif" />
+    <Content Include="images\buttons\download.gif" />
+    <Content Include="images\buttons\history.gif" />
+    <Content Include="images\buttons\search.gif" />
+    <Content Include="images\buttons\upload.gif" />
+    <Content Include="images\check.png" />
+    <Content Include="images\checked.gif" />
+    <Content Include="images\close.gif" />
+    <Content Include="images\closelabel.gif" />
+    <Content Include="images\editions_button.gif" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\generator.gif" />
+    <Content Include="images\generator_button.gif" />
+    <Content Include="images\generator_button_active.gif" />
+    <Content Include="images\icon_user.gif" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\locked.gif" />
+    <Content Include="images\login.gif" />
+    <Content Include="images\login.jpg" />
+    <Content Include="images\logo.gif" />
+    <Content Include="images\magazine_bg.png" />
+    <Content Include="images\nextlabel.gif" />
+    <Content Include="images\pdf.jpg" />
+    <Content Include="images\pdf\1.gif" />
+    <Content Include="images\pdf\10.gif" />
+    <Content Include="images\pdf\11.gif" />
+    <Content Include="images\pdf\12.gif" />
+    <Content Include="images\pdf\13.gif" />
+    <Content Include="images\pdf\14.gif" />
+    <Content Include="images\pdf\15.gif" />
+    <Content Include="images\pdf\16.gif" />
+    <Content Include="images\pdf\17.gif" />
+    <Content Include="images\pdf\2.gif" />
+    <Content Include="images\pdf\3.gif" />
+    <Content Include="images\pdf\4.gif" />
+    <Content Include="images\pdf\5.gif" />
+    <Content Include="images\pdf\6.gif" />
+    <Content Include="images\pdf\7.gif" />
+    <Content Include="images\pdf\8.gif" />
+    <Content Include="images\pdf\9.gif" />
+    <Content Include="images\pdf_c_button.gif" />
+    <Content Include="images\pdf_c_button_active.gif" />
+    <Content Include="images\plank.gif" />
+    <Content Include="images\plank_button.gif" />
+    <Content Include="images\plank_button_active.gif" />
+    <Content Include="images\prevlabel.gif" />
+    <Content Include="images\publications_button.gif" />
+    <Content Include="images\publications_button_active.gif" />
+    <Content Include="images\search.gif" />
+    <Content Include="App_Themes\green\images\status0.gif" />
+    <Content Include="App_Themes\green\images\status1.gif" />
+    <Content Include="App_Themes\green\images\status2.gif" />
+    <Content Include="App_Themes\green\images\status3.gif" />
+    <Content Include="App_Themes\green\images\status4.gif" />
+    <Content Include="images\templates_button.gif" />
+    <Content Include="images\unchecked.gif" />
+    <Content Include="images\users_button.gif" />
+    <Content Include="Views\Archief\default.aspx" />
+    <Content Include="Views\Pdf\default.aspx" />
+    <Content Include="Views\Pdf\Edit.aspx" />
+    <Content Include="Views\Plank\default.aspx" />
+    <Content Include="Views\Setting\default.aspx" />
+    <Content Include="Views\Shared\favicon.ico" />
+    <Content Include="Views\Shared\MemberSite.Master" />
+    <Content Include="Views\Shared\AdminSite.Master" />
+    <Content Include="controls\progress.ascx" />
+    <Content Include="Views\shelves\default.aspx" />
+    <Content Include="Views\shelves\EditShelve.aspx" />
+    <Content Include="Views\Status\Index.aspx" />
+    <Content Include="Views\Title\default.aspx" />
+    <Content Include="Views\Title\EditTitle.aspx" />
+    <Content Include="Views\Users\default.aspx" />
+    <Content Include="Views\Users\EditUser.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="images\ajax-loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\green\default.css" />
+    <Content Include="App_Themes\green\form.css" />
+    <Content Include="App_Themes\green\FormBox.css" />
+    <Content Include="App_Themes\green\images\Admin\admin.jpg" />
+    <Content Include="App_Themes\green\images\Admin\admin_active.jpg" />
+    <Content Include="App_Themes\green\images\Admin\admin_rollover.jpg" />
+    <Content Include="App_Themes\green\images\Admin\edities_overzicht.jpg" />
+    <Content Include="App_Themes\green\images\Admin\edities_overzicht_active.jpg" />
+    <Content Include="App_Themes\green\images\Admin\edities_overzicht_rollover.jpg" />
+    <Content Include="App_Themes\green\images\Admin\gebruikers.jpg" />
+    <Content Include="App_Themes\green\images\Admin\gebruikers_active.jpg" />
+    <Content Include="App_Themes\green\images\Admin\gebruikers_rollover.jpg" />
+    <Content Include="App_Themes\green\images\Admin\organisaties.jpg" />
+    <Content Include="App_Themes\green\images\Admin\organisaties_active.jpg" />
+    <Content Include="App_Themes\green\images\Admin\organisaties_rollover.jpg" />
+    <Content Include="App_Themes\green\images\Admin\titels_overzicht.jpg" />
+    <Content Include="App_Themes\green\images\Admin\titels_overzicht_active.jpg" />
+    <Content Include="App_Themes\green\images\Admin\titels_rollover.jpg" />
+    <Content Include="App_Themes\green\images\ajax-loader.gif" />
+    <Content Include="App_Themes\green\images\archief.jpg" />
+    <Content Include="App_Themes\green\images\archiefH.jpg" />
+    <Content Include="App_Themes\green\images\archief_active.jpg" />
+    <Content Include="App_Themes\green\images\archief_rollover.jpg" />
+    <Content Include="App_Themes\green\images\blok-bg.gif" />
+    <Content Include="App_Themes\green\images\blok-bottom.gif" />
+    <Content Include="App_Themes\green\images\blok-img.gif" />
+    <Content Include="App_Themes\green\images\blok-img.jpg" />
+    <Content Include="App_Themes\green\images\blok-top.gif" />
+    <Content Include="App_Themes\green\images\but-contact-active.gif" />
+    <Content Include="App_Themes\green\images\but-contact-over.gif" />
+    <Content Include="App_Themes\green\images\but-contact.gif" />
+    <Content Include="App_Themes\green\images\but-home-active.gif" />
+    <Content Include="App_Themes\green\images\but-home-over.gif" />
+    <Content Include="App_Themes\green\images\but-home.gif" />
+    <Content Include="App_Themes\green\images\but-izinelab-active.gif" />
+    <Content Include="App_Themes\green\images\but-izinelab-over.gif" />
+    <Content Include="App_Themes\green\images\but-izinelab.gif" />
+    <Content Include="App_Themes\green\images\but-nieuws-active.gif" />
+    <Content Include="App_Themes\green\images\but-nieuws-over.gif" />
+    <Content Include="App_Themes\green\images\but-nieuws.gif" />
+    <Content Include="App_Themes\green\images\but-waaromizine-active.gif" />
+    <Content Include="App_Themes\green\images\but-waaromizine-over.gif" />
+    <Content Include="App_Themes\green\images\but-waaromizine.gif" />
+    <Content Include="App_Themes\green\images\buttons\button.png" />
+    <Content Include="App_Themes\green\images\buttons\button_rollover.png" />
+    <Content Include="App_Themes\green\images\buttons\Copy of vernieuwen.png" />
+    <Content Include="App_Themes\green\images\buttons\reset.png" />
+    <Content Include="App_Themes\green\images\buttons\reset_rollover.png" />
+    <Content Include="App_Themes\green\images\buttons\vernieuwen.png" />
+    <Content Include="App_Themes\green\images\buttons\vernieuwen_rollover.png" />
+    <Content Include="App_Themes\green\images\buttons\vernieuwen__.png" />
+    <Content Include="App_Themes\green\images\buttons\zoeken.png" />
+    <Content Include="App_Themes\green\images\buttons\zoeken_rollover.png" />
+    <Content Include="App_Themes\green\images\containerBg.jpg" />
+    <Content Include="App_Themes\green\images\containerTop.jpg" />
+    <Content Include="App_Themes\green\images\contentsFooter.jpg" />
+    <Content Include="App_Themes\green\images\downloads_down.gif" />
+    <Content Include="App_Themes\green\images\downloads_hover.gif" />
+    <Content Include="App_Themes\green\images\downloads_normal.gif" />
+    <Content Include="App_Themes\green\images\false.png" />
+    <Content Include="App_Themes\green\images\footer-bg.gif" />
+    <Content Include="App_Themes\green\images\formbox\bg.gif" />
+    <Content Include="App_Themes\green\images\formbox\bg_top.gif" />
+    <Content Include="App_Themes\green\images\formbox\bottom_bg.gif" />
+    <Content Include="App_Themes\green\images\generator.jpg" />
+    <Content Include="App_Themes\green\images\generatorH.jpg" />
+    <Content Include="App_Themes\green\images\generator_active.jpg" />
+    <Content Include="App_Themes\green\images\generator_rollover.jpg" />
+    <Content Include="App_Themes\green\images\home-bg.jpg" />
+    <Content Include="App_Themes\green\images\icon_user.gif" />
+    <Content Include="App_Themes\green\images\iZine.gif" />
+    <Content Include="App_Themes\green\images\list-image.gif" />
+    <Content Include="App_Themes\green\images\loading.gif" />
+    <Content Include="App_Themes\green\images\logo.jpg" />
+    <Content Include="App_Themes\green\images\magazine_bg.png" />
+    <Content Include="App_Themes\green\images\mainBg.jpg" />
+    <Content Include="App_Themes\green\images\menu-bg.gif" />
+    <Content Include="App_Themes\green\images\menuGreen.jpg" />
+    <Content Include="App_Themes\green\images\menu_item_background.gif" />
+    <Content Include="App_Themes\green\images\menu_item_background.jpg" />
+    <Content Include="App_Themes\green\images\menu_item_background_hover.gif" />
+    <Content Include="App_Themes\green\images\menu_item_background_hover.jpg" />
+    <Content Include="App_Themes\green\images\nieuw.jpg" />
+    <Content Include="App_Themes\green\images\nieuwsafbeelding.gif" />
+    <Content Include="App_Themes\green\images\nieuwsafbeeldingeen.gif" />
+    <Content Include="App_Themes\green\images\nieuwsafbeeldingtwee.gif" />
+    <Content Include="App_Themes\green\images\nieuwsbottom.gif" />
+    <Content Include="App_Themes\green\images\nieuwstop.gif" />
+    <Content Include="App_Themes\green\images\nieuws_bg.gif" />
+    <Content Include="App_Themes\green\images\page-bg.jpg" />
+    <Content Include="App_Themes\green\images\page-bg_nieuws.jpg" />
+    <Content Include="App_Themes\green\images\page2-bg.jpg" />
+    <Content Include="App_Themes\green\images\pdf.jpg" />
+    <Content Include="App_Themes\green\images\pdfH.jpg" />
+    <Content Include="App_Themes\green\images\pdf_active.jpg" />
+    <Content Include="App_Themes\green\images\pdf_icon.png" />
+    <Content Include="App_Themes\green\images\pdf_rollover.jpg" />
+    <Content Include="App_Themes\green\images\plankH.jpg" />
+    <Content Include="App_Themes\green\images\publicateH.jpg" />
+    <Content Include="App_Themes\green\images\publicatie_overzicht.jpg" />
+    <Content Include="App_Themes\green\images\publicatie_overzicht_active.jpg" />
+    <Content Include="App_Themes\green\images\publicatie_overzicht_rollover.jpg" />
+    <Content Include="App_Themes\green\images\status_overzicht.jpg" />
+    <Content Include="App_Themes\green\images\status_overzicht_active.jpg" />
+    <Content Include="App_Themes\green\images\status_overzicht_rollover.jpg" />
+    <Content Include="App_Themes\green\images\topNavSeparator.jpg" />
+    <Content Include="App_Themes\green\images\true.png" />
+    <Content Include="App_Themes\green\images\working-apart-together.gif" />
+    <Content Include="App_Themes\green\images\workingApart.jpg" />
+    <Content Include="App_Themes\green\images\zoeken.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.en-US.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\KeyUser\Views\KeyDownload\Keydefault.aspx" />
+    <Content Include="Areas\KeyUser\Views\KeyDownload\KeyEditDownload.aspx" />
+    <Content Include="Areas\KeyUser\Views\KeyHome\Keyindex.aspx" />
+    <Content Include="Areas\KeyUser\Views\KeyOrganisation\Keydefault.aspx" />
+    <Content Include="Areas\KeyUser\Views\Keyshelves\Keydefault.aspx" />
+    <Content Include="Areas\KeyUser\Views\Keyshelves\KeyEditShelve.aspx" />
+    <Content Include="Areas\KeyUser\Views\KeyTitle\Keydefault.aspx" />
+    <Content Include="Areas\KeyUser\Views\KeyTitle\KeyEditTitle.aspx" />
+    <Content Include="Areas\KeyUser\Views\KeyUsers\Keydefault.aspx" />
+    <Content Include="Areas\KeyUser\Views\KeyUsers\KeyEditUser.aspx" />
+    <Content Include="Views\TitleStatus\default.aspx" />
+    <Content Include="Views\TitleStatus\EditTitleStatus.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\AdminUser\Views\Download\default.aspx" />
+    <Content Include="Areas\AdminUser\Views\Download\EditDownload.aspx" />
+    <Content Include="Areas\AdminUser\Views\AdminHome\index.aspx" />
+    <Content Include="Areas\AdminUser\Views\Organization\default.aspx" />
+    <Content Include="Areas\AdminUser\Views\Organization\EditOrganization.aspx" />
+    <Content Include="Areas\AdminUser\Views\shelves\default.aspx" />
+    <Content Include="Areas\AdminUser\Views\shelves\EditShelve.aspx" />
+    <Content Include="Areas\AdminUser\Views\TitleStatus\default.aspx" />
+    <Content Include="Areas\AdminUser\Views\TitleStatus\EditTitleStatus.aspx" />
+    <Content Include="Areas\AdminUser\Views\Title\default.aspx" />
+    <Content Include="Areas\AdminUser\Views\Title\EditTitle.aspx" />
+    <Content Include="Areas\AdminUser\Views\Lock\default.aspx" />
+    <Content Include="Areas\AdminUser\Views\Users\default.aspx" />
+    <Content Include="Areas\AdminUser\Views\Users\EditUser.aspx" />
+    <Content Include="Areas\KeyUser\Views\KeyTitleStatus\Keydefault.aspx" />
+    <Content Include="Areas\KeyUser\Views\KeyTitleStatus\KeyEditTitleStatus.aspx" />
+    <Content Include="Areas\KeyUser\Views\Lock\default.aspx" />
+    <Content Include="js\common.js" />
+    <Content Include="js\jquery-1.4.2.min.js" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.tooltip.js" />
+    <Content Include="Views\AdminDownload\App_LocalResources\EditDownload.aspx.resx" />
+    <Content Include="Views\Status\Content.ascx" />
+    <Content Include="Views\Status\Edit.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_Themes\green\js\.svn\props\" />
+    <Folder Include="App_Themes\green\js\.svn\tmp\prop-base\" />
+    <Folder Include="App_Themes\green\js\.svn\tmp\props\" />
+    <Folder Include="App_Themes\green\js\.svn\tmp\text-base\" />
+    <Folder Include="images\buttons\.svn\props\" />
+    <Folder Include="images\buttons\.svn\tmp\prop-base\" />
+    <Folder Include="images\buttons\.svn\tmp\props\" />
+    <Folder Include="images\buttons\.svn\tmp\text-base\" />
+    <Folder Include="images\pdf\.svn\props\" />
+    <Folder Include="images\pdf\.svn\tmp\prop-base\" />
+    <Folder Include="images\pdf\.svn\tmp\props\" />
+    <Folder Include="images\pdf\.svn\tmp\text-base\" />
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

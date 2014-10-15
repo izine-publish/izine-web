@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Register TagPrefix="izine" namespace="iZINE.Web.Controls" assembly="iZINE.Web.Controls"%>
+<%@ Register Assembly="iZINE.Web.Controls" Namespace="iZINE.Web.Controls" TagPrefix="cc1" %>
+<%@ Import Namespace="iZINE.Web.MVC.Extensions" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    <title><asp:Literal ID="Literal2" runat="server" Text="<%$ Resources:Resource, ApplicationName%>" /></title>
+    <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" href="../../../../Scripts/js/jquery-ui-1.7.2.custom/css/ui-lightness/jquery-ui-1.7.2.custom.css" rel="stylesheet" />
+    <link type="text/css" href="../../../../CSS/pager.css" rel="stylesheet" />		
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    
+  <script type="text/javascript" src="../../../../Scripts/js/jquery-ui-1.7.2.custom/js/jquery-1.3.2.js"></script>
+  <script type="text/javascript" src="../../../../Scripts/js/jquery-ui-1.7.2.custom/js/ui.core.js"></script>
+  <script type="text/javascript" src="../../../../Scripts/js/jquery-ui-1.7.2.custom/js/ui.draggable.js"></script>
+  <script type="text/javascript" src="../../../../Scripts/js/jquery-ui-1.7.2.custom/js/ui.resizable.js"></script>
+  <script type="text/javascript" src="../../../../Scripts/js/jquery-ui-1.7.2.custom/js/ui.dialog.js"></script>
+   <script type="text/javascript" src="../../../../Scripts/js/jquery-ui-1.7.2.custom/jquery.pager.js"></script>
+  
+  <script type="text/javascript" src="http://dev.jquery.com/view/trunk/plugins/validate/jquery.validate.js"></script>
+       
+    
+   <link rel="shortcut icon" href="../../favicon.ico" />    
+   <link href="../../../../App_Themes/default/tabmenu.css" type="text/css" rel="stylesheet" />
+   <link href="../../../../App_Themes/default/ie.css" type="text/css" rel="stylesheet" />
+   <link href="../../../../App_Themes/default/tree.css" type="text/css" rel="stylesheet" />
+   <link href="../../../../App_Themes/default/izine.css" type="text/css" rel="stylesheet" />
+   <link href="<%$ Resources:Resource, CSS%>" type="text/css" rel="stylesheet" />
+   <link href="../../../../App_Themes/green/form.css" type="text/css" rel="stylesheet" />
+   <link href="../../../../App_Themes/green/FormBox.css" type="text/css" rel="stylesheet" />
+   <link href="../../../../App_Themes/green/modal.css" type="text/css" rel="stylesheet" />
+   <link href="../../../../App_Themes/green/progress.css" type="text/css" rel="stylesheet" />
+   
+   <script type="text/javascript">
+       (function($) {
+           $(document).ready(function() {
+               $("input[type=text]").focus(function() {
+                   // Select field contents
+                   $(this).addClass("active");
+
+               });
+
+               $('input[type="text"]').blur(function() {
+                   $(this).removeClass("active");
+
+               });
+
+               $("textarea").focus(function() {
+                   // Select field contents
+                   $(this).addClass("active");
+
+               });
+
+               $('textarea').blur(function() {
+                   $(this).removeClass("active");
+
+               });
+
+           });
+       })(jQuery);
+     
+</script>  
+<link rel="shortcut icon" href="../../../../images/favicon.ico" />    
+</head>
+<body id="homepage">
+ <div id="container">
+
+    <div id="header">
+        <div id="topMenu">
+            <%Html.RenderPartial("LogOnUserControl"); %>
+                 </div>
+                                <a href="/home/index" id="iZine">iZine Publish</a>
+                                <a href="/home/index" id="slogan">Working Apart Together</a>
+                 </div>
+                 <div>
+                    <div id="menu">
+                         <ol>   
+                             <li><%=Html.MenuActionLink("ORGANIZATION", "index", "KeyOrganisation", "organizations", "organizationsActive", "KeyUser")%></li>
+                             <li><%=Html.MenuActionLink("GEBRUIKERS", "index", "KeyUsers", "users", "usersActive", "KeyUser")%></li>
+                             <li><%=Html.MenuActionLink("TITELS", "index", "KeyTitle", "titles", "titlesActive", "KeyUser")%></li>
+                             <li><%=Html.MenuActionLink("EDITIES", "index", "Keyshelves", "editions", "editionsActive","KeyUser")%></li>
+                             <li><%=Html.MenuActionLink("DOWNLOADS", "index", "KeyDownload", "download", "downloadActive", "KeyUser")%></li>
+                             <li><%=Html.MenuActionLink("TITLESTATUS", "index", "Keytitlestatus", "Keystatus", "KeystatusActive", "KeyUser")%></li>
+                             <li><%=Html.MenuActionLink("UNLOCK", "index", "Lock", "unlock", "unlockActive", "KeyUser")%></li>
+                        </ol>
+                   </div>
+                 </div>
+                 <div id="mainblock">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">       
+                    </asp:ContentPlaceHolder>
+                </div>
+        <div id="footer">&copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> iZine Publish - <label  id='lVersion'><%= IZineWebConfiguration.GetSection().Version %></label></div>     
+    </div> 
+
+</body>
+</html>
